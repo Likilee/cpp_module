@@ -94,3 +94,15 @@ https://gcc.godbolt.org/
 ### 소멸자에 virtual을 쓰는 이유
 
 [링크](http://hyacinth.byus.net/moniwiki/wiki.php/C%2B%2B/%EC%86%8C%EB%A9%B8%EC%9E%90%EC%97%90%20virtual%EC%9D%84%20%EC%93%B0%EB%8A%94%20%EC%9D%B4%EC%9C%A0)
+
+
+
+### 난수 발생
+
+난수를 발생시킬 때 rand와 시드값 생성인 srand의 한계가 존재한다. > srand(time(0)) 은 초단위의 씨드이기 때문에 같은 난수가 사용될 확률이 매우 높다.
+
+또한 나머지 연산자를 통해 최대값 미만의 난수를 얻는 방법을 주로 사용한는데, 여기서는 비균일 분포를 이룬다는 한계가 존재한다. 이는 금융 등
+
+
+
+[c++ 에서는 c에서 쓰던 rand 와 srand를 갖다 버리자](https://modoocode.com/304)

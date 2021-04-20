@@ -21,6 +21,7 @@ Zombie	*ZombieEvent::newZombie(std::string name)
 std::string	ZombieEvent::randomName(void)
 {
 	int			i;
+
 	std::string	name[] =
 	{
 		"Ammo Sponge",
