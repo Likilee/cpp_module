@@ -81,6 +81,16 @@ https://gcc.godbolt.org/
 
 
 
+### 입력 버퍼 ? 스트림?
+
+http://www.tcpschool.com/cpp/cpp_io_streamBuffer
+
+![스트림](README.assets/img_c_stream.png)
+
+[C++에서 EOF (cnt+D) 로 종료 시](https://pythonq.com/so/c%2B%2B/1570575) 
+
+
+
 ## CPP01
 
 

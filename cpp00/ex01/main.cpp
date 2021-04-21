@@ -10,7 +10,8 @@ int		main(int argc, char **argv)
 	while (1)
 	{
 		std::cout << "\n** TYPE COMMAND (ADD / SEARCH / EXIT) **" << std::endl;
-		getline(std::cin, command);
+		if (getline(std::cin, command).eof())
+			return (0);
 		if (command == "ADD")
 			phone_book.Add();
 		else if (command == "SEARCH")
