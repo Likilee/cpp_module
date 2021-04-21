@@ -9,9 +9,11 @@ Brain::~Brain()
 {
 }
 
-const void	*Brain::identify() const
+const std::string	Brain::identify() const
 {
-	return(this);
+	std::stringstream	pointer;
+	pointer << this;
+	return (pointer.str());
 }
 
 void	Brain::SetBrain(std::string favorite_food)
