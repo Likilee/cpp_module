@@ -178,3 +178,61 @@ std::ostream	&operator<<(std::ostream &out, const Fixed &a)
 하지만 ostream 객체는 표준라이브러리 내의 객체이기 때문에 객체 내부에 연산자 오버로딩을 추가 할 수 없다. 
 
 즉, 연산자 오버로딩을 추가해주기 위해서는 전역으로 정의해주는 방식 뿐이다.
+
+
+
+### Class Canonical form
+
+[Canonical form 이란?](https://m.blog.naver.com/PostView.nhn?blogId=qbxlvnf11&logNo=221971400151&proxyReferer=https:%2F%2Fwww.google.com%2F) : **수학적 수식으로 나타내어질 수 있는 객체의 표현형을 고유하게 나타내는 표준 방식을 말한다.
+
+class의 canonical form
+
+```cpp
+class A
+{
+public:
+  A(); // 기본 생성자
+  A(const A &a); // 복사 생성자
+  ~A(); // 소멸자 (only one)
+  A 	&operator=(const A &a); // 대입 연산자.
+}
+```
+
+
+
+
+
+## CPP03
+
+### [다중 상속(multiple inheritance)이란?](https://m.blog.naver.com/PostView.nhn?blogId=kks227&logNo=60207057116&proxyReferer=https:%2F%2Fwww.google.com%2F)
+
+### [가상상속이란?](https://hwan-shell.tistory.com/224)
+
+### [다이아몬드 상속이란? 피하는방법은?](https://codingcoding.tistory.com/517)
+
+### 객체 지향 용어
+
+수퍼 클래스 = 기본/기초/부모 클래스 
+
+서브 클래스 = 자식 클래스
+
+
+
+### 서브 클래스 생성 시에 메모리에는 어떤식으로 클래스가 생성되는 걸까?
+
+
+
+## [Class 상속에 따른 메모리구조](https://www.sysnet.pe.kr/2/0/11164)
+
+> class 는 기본 1byte 먹는다.
+
+
+
+### Byte 패딩
+
+바이트 패딩은 32bit, 64bit cpu 의 연산 효율을 위해서! 데이터를 맞춰서 정렬하는거다 ( 4byte, 8byte ) 남는 바이트에 패딩채워서 
+
+
+
+
+

@@ -38,7 +38,7 @@ FragTrap::~FragTrap()
 	std::cout << "FR4G-TP <" << _name << "> I'll be back.....!!!" << std::endl;
 }
 
-FragTrap			&FragTrap::operator=(const FragTrap &rvalue)
+FragTrap	&FragTrap::operator=(const FragTrap &rvalue)
 {
 	if (this != &rvalue)
 		_name = rvalue.getName();
@@ -50,21 +50,21 @@ const std::string	&FragTrap::getName() const
 	return (_name);
 }
 
-void				FragTrap::rangedAttack(std::string const &target)
+void		FragTrap::rangedAttack(std::string const &target)
 {
 	std::cout << "FR4G-TP <" << _name << "> attacks <" << target
 				<< "> at range, causing <" << _ranged_attack_damage
 				<< "> points of damage!(range)" << std::endl;
 }
 
-void				FragTrap::meleeAttack(std::string const &target)
+void		FragTrap::meleeAttack(std::string const &target)
 {
 	std::cout << "FR4G-TP <" << _name << "> attacks <" << target
 				<< "> at melee, causing <" << _melee_attack_damage
 				<< "> points of damage!(melee)" << std::endl;
 }
 
-void				FragTrap::takeDamage(unsigned int amount)
+void		FragTrap::takeDamage(unsigned int amount)
 {
 	int		damage = amount - _armor_damage_reduction;
 
@@ -76,7 +76,7 @@ void				FragTrap::takeDamage(unsigned int amount)
 	std::cout << "FR4G-TP <" << _name << "> take damage <" << damage << ">" << std::endl;
 }
 
-void				FragTrap::beRepaired(unsigned int amount)
+void		FragTrap::beRepaired(unsigned int amount)
 {
 	int		repair = amount;
 
@@ -88,7 +88,7 @@ void				FragTrap::beRepaired(unsigned int amount)
 		std::cout << "FR4G-TP <" << _name << "> is repaired <" << repair << "> hit points is <" << _hit_points << ">" << std::endl;
 }
 
-void				FragTrap::vaulthunter_dot_exe(std::string const & target)
+void		FragTrap::vaulthunter_dot_exe(std::string const & target)
 {
 	int			i;
 	std::string	attack_message[] = {
