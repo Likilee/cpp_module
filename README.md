@@ -185,7 +185,7 @@ std::ostream	&operator<<(std::ostream &out, const Fixed &a)
 
 [Canonical form 이란?](https://m.blog.naver.com/PostView.nhn?blogId=qbxlvnf11&logNo=221971400151&proxyReferer=https:%2F%2Fwww.google.com%2F) : **수학적 수식으로 나타내어질 수 있는 객체의 표현형을 고유하게 나타내는 표준 방식을 말한다.
 
-class의 canonical form
+class의 coplien form
 
 ```cpp
 class A
@@ -236,3 +236,12 @@ public:
 
 
 
+## CPP04
+
+**keyword** 
+
+- Subtype polymorphism
+- abstract classes
+- interfaces
+
+### [friend class 란?](https://yeolco.tistory.com/116)
