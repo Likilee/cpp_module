@@ -30,7 +30,6 @@ std::string	ZombieEvent::randomName(void)
 		"Undead",
 		"Necrosapien"
 	};
-	srand(time(NULL));
 	i = rand() % 5;
 	return (name[i]);
 }

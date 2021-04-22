@@ -4,7 +4,7 @@
 
 std::string	Replace(std::string &target, std::string sub, std::string mod)
 {
-	int			start_pos;
+	size_t			start_pos;
 
 	start_pos = 0;
 	while ((start_pos = target.find(sub, start_pos)) != std::string::npos)
@@ -21,6 +21,12 @@ int		main(int ac, char **av)
 	std::ofstream	fout;
 	std::string		str;
 
+	if (ac != 4)
+	{
+		std::cout << "===     Arguments input must be this style    ===" << std::endl;
+		std::cout << "=== $ ./a.out [file_name] [str_sub] [str_mod] ===" << std::endl;
+		return (0);
+	}
 	fin.open(av[1]);
 	if (fin.is_open())
 	{
@@ -34,5 +40,6 @@ int		main(int ac, char **av)
 		fout.close();
 	}
 	fin.close();
+	std::cout << "=== Replace file was created ===" << std::endl;
 	return (0);
 }

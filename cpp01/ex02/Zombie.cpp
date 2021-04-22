@@ -2,7 +2,7 @@
 
 Zombie::Zombie(void)
 {
-	this->name = "Zombie";
+	this->name = "Default";
 	this->type = "Extra";
 }
 
@@ -14,11 +14,11 @@ Zombie::Zombie(std::string name_in, std::string type_in)
 
 Zombie::~Zombie(void)
 {
-	std::cout << "<" << this->name << "> I'm dyiiiiiing~~~~" << std::endl << std::endl;
+	std::cout << "<" << this->name << "> I'm dyiiiiiing~~~~" << std::endl;
 }
 
 void	Zombie::anounce(void)
 {
-	std::cout << "<" << this->name << " (" << this->type
+	std::cout << "<" << this->name << "(" << this->type
 				<< ")> Braiiiiiiinnnssss..." << std::endl;
 }
