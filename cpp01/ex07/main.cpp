@@ -21,7 +21,7 @@ int		main(int ac, char **av)
 	std::ofstream	fout;
 	std::string		str;
 
-	if (ac != 4)
+	if (ac != 4 || av[2][0] == '\0')
 	{
 		std::cout << "===     Arguments input must be this style    ===" << std::endl;
 		std::cout << "=== $ ./a.out [file_name] [str_sub] [str_mod] ===" << std::endl;

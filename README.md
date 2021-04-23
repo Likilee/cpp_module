@@ -245,3 +245,8 @@ public:
 - interfaces
 
 ### [friend class 란?](https://yeolco.tistory.com/116)
+
+
+
+### [Virtual function vs Pure virtual function](https://stackoverflow.com/questions/2652198/difference-between-a-virtual-function-and-a-pure-virtual-function)
+
