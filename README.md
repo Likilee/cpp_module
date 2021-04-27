@@ -250,3 +250,17 @@ public:
 
 ### [Virtual function vs Pure virtual function](https://stackoverflow.com/questions/2652198/difference-between-a-virtual-function-and-a-pure-virtual-function)
 
+
+
+### [스코프가 뭐지?](https://brunch.co.kr/@stdcpp/15) 
+
+
+
+### [public / private / protected](https://eurekadeveloper.tistory.com/entry/public-private-protect%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90) 
+
+
+
+### [Interface class 는?](https://igotit.tistory.com/entry/C%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4-%ED%81%B4%EB%9E%98%EC%8A%A4-interface)
+
+가상 소멸자와! 순수 가상함수로만 구성되어있는 클래스.
+
