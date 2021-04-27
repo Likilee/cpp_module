@@ -36,6 +36,7 @@ void	Character::equip(AWeapon *weapon)
 {
 	_weapon = weapon;
 }
+
 void	Character::attack(Enemy *enemy)
 {
 	if (this->getWeapon() != NULL && this->getWeapon()->getAPCost() < this->getAP())
