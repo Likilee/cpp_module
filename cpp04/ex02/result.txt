@@ -1,0 +1,397 @@
+Tactical Marine ready for battle!$
+* teleports from space *$
+For the holy PLOT!$
+* attacks with a bolter *$
+* attacks with a chainsword *$
+This code is unclean. PURIFY IT!$
+* does nothing *$
+* attacks with chainfists *$
+Aaargh...$
+I'll be back...$
+$
+--- EXTRA ---$
+$
+$
+==== COPY FROM 3 TO 1$
+$
+->> ADDING TO SRC$
+Tactical Marine ready for battle!$
+Tactical Marine ready for battle!$
+Tactical Marine ready for battle!$
+$
+->> ADDING TO DEST$
+* teleports from space *$
+$
+->> COPY START$
+I'll be back...$
+->> COPY END$
+$
+original: 3$
+copy: 3$
+$
+->> DELETE$
+$
+Aaargh...$
+Aaargh...$
+Aaargh...$
+Aaargh...$
+Aaargh...$
+Aaargh...$
+$
+==== COPY FROM 1 TO 3$
+$
+->> ADDING TO SRC$
+* teleports from space *$
+$
+->> ADDING TO DEST$
+Tactical Marine ready for battle!$
+Tactical Marine ready for battle!$
+Tactical Marine ready for battle!$
+$
+->> COPY START$
+Aaargh...$
+Aaargh...$
+Aaargh...$
+->> COPY END$
+$
+original: 1$
+copy: 1$
+$
+->> DELETE$
+$
+I'll be back...$
+I'll be back...$
+$
+==== COPY FROM 3 TO 3$
+$
+->> ADDING TO SRC$
+* teleports from space *$
+* teleports from space *$
+* teleports from space *$
+$
+->> ADDING TO DEST$
+Tactical Marine ready for battle!$
+Tactical Marine ready for battle!$
+Tactical Marine ready for battle!$
+$
+->> COPY START$
+Aaargh...$
+Aaargh...$
+Aaargh...$
+->> COPY END$
+$
+original: 3$
+copy: 3$
+$
+->> DELETE$
+$
+I'll be back...$
+I'll be back...$
+I'll be back...$
+I'll be back...$
+I'll be back...$
+I'll be back...$
+$
+==== DELETE A LOT AT SQUAD FREE$
+$
+->> ADDING$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+$
+->> DELETING$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+$
+==== GET AT$
+$
+->> ADDING$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+Tactical Marine ready for battle!$
+* teleports from space *$
+$
+->> USING ATTACK$
+[-2] = 0x0$
+$
+[-1] = 0x0$
+$
+[0] = 0x7faffcc05840$
+* attacks with a chainsword *$
+$
+[1] = 0x7faffcc05830$
+* attacks with chainfists *$
+$
+[2] = 0x7faffcc05850$
+* attacks with a chainsword *$
+$
+[3] = 0x7faffcc058c0$
+* attacks with chainfists *$
+$
+[4] = 0x7faffcc05880$
+* attacks with a chainsword *$
+$
+[5] = 0x7faffcc05890$
+* attacks with chainfists *$
+$
+[6] = 0x7faffcc058a0$
+* attacks with a chainsword *$
+$
+[7] = 0x7faffcc058b0$
+* attacks with chainfists *$
+$
+[8] = 0x7faffcc05920$
+* attacks with a chainsword *$
+$
+[9] = 0x7faffcc05930$
+* attacks with chainfists *$
+$
+[10] = 0x7faffcc059a0$
+* attacks with a chainsword *$
+$
+[11] = 0x7faffcc059b0$
+* attacks with chainfists *$
+$
+[12] = 0x7faffcc059c0$
+* attacks with a chainsword *$
+$
+[13] = 0x7faffcc058d0$
+* attacks with chainfists *$
+$
+[14] = 0x7faffcc058e0$
+* attacks with a chainsword *$
+$
+[15] = 0x7faffcc058f0$
+* attacks with chainfists *$
+$
+[16] = 0x7faffcc05900$
+* attacks with a chainsword *$
+$
+[17] = 0x7faffcc05910$
+* attacks with chainfists *$
+$
+[18] = 0x7faffcc05940$
+* attacks with a chainsword *$
+$
+[19] = 0x7faffcc05950$
+* attacks with chainfists *$
+$
+[20] = 0x7faffcc05960$
+* attacks with a chainsword *$
+$
+[21] = 0x7faffcc05970$
+* attacks with chainfists *$
+$
+[22] = 0x7faffcc05980$
+* attacks with a chainsword *$
+$
+[23] = 0x7faffcc05990$
+* attacks with chainfists *$
+$
+[24] = 0x7faffcc059d0$
+* attacks with a chainsword *$
+$
+[25] = 0x7faffcc059e0$
+* attacks with chainfists *$
+$
+[26] = 0x7faffcc05ad0$
+* attacks with a chainsword *$
+$
+[27] = 0x7faffcc05bc0$
+* attacks with chainfists *$
+$
+[28] = 0x7faffcc059f0$
+* attacks with a chainsword *$
+$
+[29] = 0x7faffcc05a00$
+* attacks with chainfists *$
+$
+[30] = 0x7faffcc05a10$
+* attacks with a chainsword *$
+$
+[31] = 0x7faffcc05a20$
+* attacks with chainfists *$
+$
+[32] = 0x7faffcc05a30$
+* attacks with a chainsword *$
+$
+[33] = 0x7faffcc05a40$
+* attacks with chainfists *$
+$
+[34] = 0x7faffcc05a50$
+* attacks with a chainsword *$
+$
+[35] = 0x7faffcc05a60$
+* attacks with chainfists *$
+$
+[36] = 0x7faffcc05a70$
+* attacks with a chainsword *$
+$
+[37] = 0x7faffcc06250$
+* attacks with chainfists *$
+$
+[38] = 0x7faffcc06260$
+* attacks with a chainsword *$
+$
+[39] = 0x7faffcc06270$
+* attacks with chainfists *$
+$
+[40] = 0x0$
+$
+[41] = 0x0$
+$
+[42] = 0x0$
+$
+$
+->> DELETING$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
+Aaargh...$
+I'll be back...$
