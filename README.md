@@ -264,3 +264,10 @@ public:
 
 가상 소멸자와! 순수 가상함수로만 구성되어있는 클래스.
 
+### [virtual의 동작 원리](https://sexycoder.tistory.com/10)
+
+- 상속 / 오버라이딩  에 대해서도 제대로 알아야할듯.
+
+
+
+### [가상함수테이블!!](https://sexycoder.tistory.com/10)

@@ -13,7 +13,6 @@ int main(void)
 	std::cout << "=====================================================" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << trap3.getName() << std::endl;
 	trap1.rangedAttack(trap2.getName());
 	trap1.meleeAttack(trap2.getName());
 
