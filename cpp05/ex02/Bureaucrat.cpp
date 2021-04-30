@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 void	Bureaucrat::checkGrade(int &grade) const
 {
@@ -60,6 +61,34 @@ void		Bureaucrat::decreaseGrade()
 	++_grade;
 	this->checkGrade(_grade);
 }
+void		Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << *this << " signs [" << form << "]" << std::endl;
+	}
+	catch (const std::exception& e)
+	{
+		std::cerr	<< *this << " cannot sign [" << form
+					<< "] because " << e.what() << std::endl;
+	}
+
+}
+
+void		Bureaucrat::executeForm(Form const &form)
+{
+	try
+	{
+		form.execute(*this);
+	}
+	catch (const std::exception& e)
+	{
+		std::cerr	<< *this << " cannot excute [" << form
+					<< "] because " << e.what() << std::endl;
+	}
+}
+
 
 // Global
 std::ostream	&operator<<(std::ostream &out, Bureaucrat &b)

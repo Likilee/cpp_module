@@ -271,3 +271,14 @@ public:
 
 
 ### [가상함수테이블!!](https://sexycoder.tistory.com/10)
+
+
+
+## CPP 05
+
+### std::exception 을 상속받아서 what() 함수 오버라이딩 시 
+
+`virtual const char *what() const throw()` 에서 **[throw()의 의미](https://stackoverflow.com/questions/5230463/what-does-this-function-declaration-mean-in-c)**는?
+
+- `throw()` means that you promise to the compiler that this function will never allow an exception to be emitted. This is called an *exception specification*, and (long story short) is useless and possibly misleading.
+
