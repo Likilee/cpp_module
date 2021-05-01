@@ -282,3 +282,27 @@ public:
 
 - `throw()` means that you promise to the compiler that this function will never allow an exception to be emitted. This is called an *exception specification*, and (long story short) is useless and possibly misleading.
 
+### [함수 포인터 배열 만들기](https://pang2h.tistory.com/287)
+
+함수 포인터 또한 자료형이다. 모든 자료형은 배열을 만들 수 있다. 
+
+함수 포인터를 배열로 만들어 이용해보자!
+
+#### 생성 방법
+
+```c++
+int (*fp[10])(int) = {func1, func2, func3};
+
+fp[3] = func4;
+```
+
+#### 사용 방법
+
+```c++
+int (*fp[10])(const char *, ...) = {printf,};
+
+(*fp[0])("Hello world!\n");
+// or
+fp[0]("Hello world!\n");
+```
+
