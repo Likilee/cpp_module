@@ -306,3 +306,24 @@ int (*fp[10])(const char *, ...) = {printf,};
 fp[0]("Hello world!\n");
 ```
 
+
+
+### [다운캐스팅](https://simsimjae.tistory.com/192)
+
+Person 이라는 부모클래스와 Student,Child.Adult 라는 자식클래스가 있을 때,
+
+Person *guess_what = new 자식클래스;
+
+일 때 실제 guess_what 이 가리키는 실제 클래스가 무엇인지 어떻게 알 수 있을까?
+
+Answer is : using `dynamic_cast `
+
+사용법
+
+```c++
+dynamic_cast<Student*>(guess_what); 
+
+// 타입캐스팅 성공시에는 Student*를 리턴
+// 실패시에는 NULL을 리턴
+```
+
