@@ -335,10 +335,38 @@ dynamic_cast<Student*>(guess_what);
 
 - 함수 템플릿 : 함수를 기반으로 구현이 된 템플릿 (함수가 아니라는 뜻)
 
-- 템플릿 함수 : 템플릿을 기반으로 한 함수! 
+- 템플릿 함수 : 템플릿을 기반으로 한 함수!  -> 이딴건 없는거 같은데?!
 
   > 뒤에 단어가 정체성을 나타낸다
 
 - 객체의 생성 순서 : 메모리 할당 -> 생성자 호출, so 템플릿 클래스를 `Data d(10)`ㅇㅣ렇게 생성 불가.
   `Data<int> d(10)` 이런식으로 사용해야함
+
+
+
+## CPP08
+
+- 템플릿 컨테이너
+
+[cpp typename의 2가지 의미](https://m.blog.naver.com/PostView.nhn?blogId=ktm0122&logNo=20167641378&proxyReferer=https:%2F%2Fwww.google.com%2F), [typename추가설명](https://wikidocs.net/433), [중첩의존이름](https://deious.tistory.com/44)
+
+[cpp 컨테이너](https://www.cplusplus.com/reference/stl/) , [컨테이너2](http://www.tcpschool.com/cpp/cpp_container_intro)
+
+[cpp 컨테이너 종류별 간단한 정리](http://blog.naver.com/PostView.nhn?blogId=ya3344&logNo=221360287260&redirect=Dlog&widgetTypeCall=true&directAccess=false)
+
+What is 중첩 의존 이름
+
+> 템플릿 내에서 
+>
+> 비의존 이름 : int 
+
+[STL이란?](https://blockdmask.tistory.com/67) 
+
+> Standard Template Library
+
+[stl find](https://modoocode.com/261)
+
+
+
+### [try catch 예외처리를 이용해서 메모리 이슈를 잡을 수 있는가? 일단 NO](https://www.daniweb.com/programming/software-development/threads/398285/is-there-any-way-to-catch-segmentation-fault)
 
