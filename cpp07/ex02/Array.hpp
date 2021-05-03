@@ -12,13 +12,15 @@ private:
 public:
 	Array();
 	Array(unsigned int n);
-	Array(const Array &from);
+	Array(Array const &from);
 	virtual ~Array();
-	Array	&operator=(const Array &rvalue);
+	Array	&operator=(Array const &rvalue);
 
-	T		&operator[](unsigned int i);
-	unsigned int	&size() const;
-
+	T				&operator[](unsigned int i) const;
+	unsigned int	size() const;
+	T				*getArray() const;
 };
+
+# include "Array.ipp"
 
 #endif

@@ -1,5 +1,3 @@
-#include "Array.hpp"
-
 template <typename T>
 Array<T>::Array(): _array(NULL), _n(0)
 {
@@ -11,7 +9,7 @@ Array<T>::Array(unsigned int n): _array(new T[n]()), _n(n)
 }
 
 template <typename T>
-Array<T>::Array(const Array<T> &from)
+Array<T>::Array(Array<T> const &from): _array(NULL), _n(0)
 {
 	*this = from;
 }
@@ -23,22 +21,22 @@ Array<T>::~Array()
 }
 
 template <typename T>
-Array<T>	&Array<T>::operator=(const Array<T> &rvalue)
+Array<T>	&Array<T>::operator=(Array<T> const &rvalue)
 {
 	if (this != &rvalue)
 	{
-		if (_array)
+		if (_array && _n != 0)
 			delete [] _array;
 		_n = rvalue.size();
 		_array = new T[_n];
-		for (int i = 0; i < _n; ++i)
-			_array[i] = rvalue[i];
+		for (unsigned int i = 0; i < _n; ++i)
+			_array[i] = rvalue.getArray()[i];
 	}
 	return (*this);
 }
 
 template <typename T>
-T		&Array<T>::operator[](unsigned int i)
+T		&Array<T>::operator[](unsigned int i) const
 {
 	if (i >= _n)
 		throw std::exception();
@@ -47,7 +45,13 @@ T		&Array<T>::operator[](unsigned int i)
 }
 
 template <typename T>
-unsigned int	&Array<T>::size() const
+unsigned int	Array<T>::size() const
 {
 	return (_n);
+}
+
+template <typename T>
+T				*Array<T>::getArray() const
+{
+	return (_array);
 }

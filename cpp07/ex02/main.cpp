@@ -1,66 +1,151 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 #include "Array.hpp"
-#include "Array.ipp"
 
-int main(void)
+int main()
 {
-	Array<int> intR;
-
-	Array<int> intRR(5);
-	intR = intRR;
-	for (size_t i = 0; i < intR.size(); i++)
+	// int test
+	std::cout << "\n[ == Array<int>(42) test == ]\n" << std::endl;
+	Array<int> test(42);
+	std::cout << "* Initialize test *" << std::endl;
+	for(unsigned int i = 0;i < test.size();i++)
 	{
-		intR[i] = i;
-		std::cout << intR[i] << " ";
+		std::cout << test[i] << " ";
 	}
 	std::cout << std::endl;
-	for (size_t i = 0; i < intRR.size(); i++)
+	try{
+		std::cout << "* Size test *" << std::endl;
+		std::cout << test.size() << std::endl;
+
+		std::cout << "* Inside value test *" << std::endl;
+		for(unsigned int i = 0;i < test.size();i++)
+		{
+			test[i] = i + 1;
+			std::cout << test[i] << " ";
+		}
+		std::cout << std::endl;
+
+		std::cout << "* Deep Copy test*" << std::endl;
+		Array<int> test2(test);
+		for(unsigned int i = 0;i < test2.size();i++)
+		{
+			test[i] = i * 2; // original 에 값을 바꿔도!
+			std::cout << test2[i] << " "; // 똑같이 나오니?
+		}
+		std::cout << std::endl;
+		std::cout << "* Exception test *" << std::endl;
+		std::cout << test[44] << std::endl;
+	}catch (std::exception &e){
+		std::cout << e.what() << std::endl;
+	}
+
+	std::cout << "\n[ == const Array<int>(42) test == ]\n" << std::endl;
+	const Array<int> test3(3);
+	try{
+		std::cout << "* Size test *" << std::endl;
+		std::cout << test3.size() << std::endl;
+		std::cout << "* Inside value test *" << std::endl;
+		for(unsigned int i = 0;i < test3.size();i++)
+		{
+			test3[i] = i + 1;
+			std::cout << test3[i] << " ";
+		}
+		std::cout << std::endl;
+
+		std::cout << "* Deep Copy test*" << std::endl;
+		Array<int> test4(test3);
+		for(unsigned int i = 0;i < test4.size();i++)
+		{
+			test3[i] = i * 2;
+			std::cout << test4[i] << " ";
+		}
+		std::cout << std::endl;
+
+		std::cout << "* Value Change test*" << std::endl;
+		for(unsigned int i = 0;i < test3.size();i++)
+		{
+			std::cout << test3[i] << " ";
+		}
+		std::cout << std::endl;
+
+		std::cout << "* Exception test *" << std::endl;
+		std::cout << test3[44] << std::endl;
+
+	}catch (std::exception &e){
+		std::cout << e.what() << std::endl;
+	}
+
+	// char test
+	std::cout << "\n[ == Array<char>(42) test == ]\n" << std::endl;
+	Array<char> test5(42);
+	std::cout << "* Initialize test *" << std::endl;
+	for(unsigned int i = 0;i < test5.size();i++)
 	{
-		std::cout << intRR[i] << " ";
+		std::cout << static_cast<int>(test5[i]) << " ";
 	}
 	std::cout << std::endl;
+	try{
+		std::cout << "* Size test *" << std::endl;
+		std::cout << test5.size() << std::endl;
 
-	Array<float> floatR(25);
-	for (size_t i = 0; i < floatR.size(); i++)
+		std::cout << "* Inside value test *" << std::endl;
+		for(unsigned int i = 0;i < test5.size();i++)
+		{
+			test5[i] = i + 48;
+			std::cout << test5[i] << " ";
+		}
+		std::cout << std::endl;
+
+		std::cout << "* Deep Copy test*" << std::endl;
+		Array<char> test6(test5);
+		for(unsigned int i = 0;i < test6.size();i++)
+		{
+			test5[i] = i * 2; // original 에 값을 바꿔도!
+			std::cout << test6[i] << " "; // 똑같이 나오니?
+		}
+		std::cout << std::endl;
+		std::cout << "* Exception test *" << std::endl;
+		std::cout << test5[44] << std::endl;
+	}catch (std::exception &e){
+		std::cout << e.what() << std::endl;
+	}
+
+	// string test
+	std::cout << "\n[ == Array<string>(42) test == ]\n" << std::endl;
+	Array<std::string> test7(42);
+	std::cout << "* Initialize test *" << std::endl;
+	for(unsigned int i = 0;i < test7.size();i++)
 	{
-		std::cout << floatR[i] << "f ";
+		std::cout << test7[i] << " ";
 	}
 	std::cout << std::endl;
+	try{
+		std::cout << "* Size test *" << std::endl;
+		std::cout << test7.size() << std::endl;
 
-	Array<std::string> stringR(5);
-	for (size_t i = 0; i < stringR.size(); i++)
-	{
-		stringR[i] = std::to_string(i);
-		std::cout << stringR[i] << "s ";
+		std::cout << "* Inside value test *" << std::endl;
+		for(unsigned int i = 0;i < test7.size();i++)
+		{
+			std::stringstream s;
+			s << "s" << i;
+			s >> test7[i];
+			std::cout << test7[i] << " ";
+		}
+		std::cout << std::endl;
+
+		std::cout << "* Deep Copy test*" << std::endl;
+		Array<std::string> test8(test7);
+		for(unsigned int i = 0;i < test8.size();i++)
+		{
+			test7[i] = i * 2; // original 에 값을 바꿔도!
+			std::cout << test8[i] << " "; // 똑같이 나오니?
+		}
+		std::cout << std::endl;
+		std::cout << "* Exception test *" << std::endl;
+		std::cout << test7[44] << std::endl;
+	}catch (std::exception &e){
+		std::cout << e.what() << std::endl;
 	}
-	std::cout << std::endl;
-
-	Array<std::string> stringRR = stringR;
-	for (size_t i = 0; i < 5; i++)
-		stringRR[i] = "42";
-	for (size_t i = 0; i < stringR.size(); i++)
-		std::cout << stringR[i] << "s <> " << stringRR[i] << std::endl;
-
-	std::cout << "---" << std::endl;
-
-	try
-	{
-		intRR[-1] = 2;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-
-	try
-	{
-		intRR[999] = 2;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-
-	return (0);
 }
+

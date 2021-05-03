@@ -327,3 +327,18 @@ dynamic_cast<Student*>(guess_what);
 // 실패시에는 NULL을 리턴
 ```
 
+
+
+## CPP07
+
+### [함수 템플릿 / 템플릿 함수 / 클래스 템플릿!](https://pacs.tistory.com/entry/C-%ED%95%A8%EC%88%98-%ED%85%9C%ED%94%8C%EB%A6%BF%EA%B3%BC-%ED%81%B4%EB%9E%98%EC%8A%A4-%ED%85%9C%ED%94%8C%EB%A6%BF-Function-template-Class-template)
+
+- 함수 템플릿 : 함수를 기반으로 구현이 된 템플릿 (함수가 아니라는 뜻)
+
+- 템플릿 함수 : 템플릿을 기반으로 한 함수! 
+
+  > 뒤에 단어가 정체성을 나타낸다
+
+- 객체의 생성 순서 : 메모리 할당 -> 생성자 호출, so 템플릿 클래스를 `Data d(10)`ㅇㅣ렇게 생성 불가.
+  `Data<int> d(10)` 이런식으로 사용해야함
+
