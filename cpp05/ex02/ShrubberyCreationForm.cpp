@@ -65,9 +65,14 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 			drawTree(fout);
 			std::cout << "Excute ShrubberyCreation!" << std::endl;
 		}
-		catch(std::exception &e)
+		catch(std::ofstream::failure e)
 		{
 			std::cout << e.what() << std::endl;
 		}
 	}
+}
+
+const char *ShrubberyCreationForm::IsNotOpenException::what() const throw()
+{
+	return ("Exception occured : file open failure");
 }

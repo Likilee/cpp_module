@@ -16,6 +16,10 @@ public:
 	~ShrubberyCreationForm();
 	ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &rvalue);
 
+	class IsNotOpenException : public std::exception
+	{
+		virtual const char *what() const throw();
+	};
 	std::string const	&getTarget() const;
 	void	execute(Bureaucrat const &executor) const;
 };

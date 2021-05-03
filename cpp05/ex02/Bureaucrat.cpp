@@ -1,7 +1,7 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-void	Bureaucrat::checkGrade(int &grade) const
+void	Bureaucrat::checkGrade(int grade) const
 {
 	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
@@ -52,14 +52,14 @@ const int	&Bureaucrat::getGrade() const
 
 void		Bureaucrat::increaseGrade()
 {
+	this->checkGrade(_grade - 1);
 	--_grade;
-	this->checkGrade(_grade);
 }
 
 void		Bureaucrat::decreaseGrade()
 {
+	this->checkGrade(_grade + 1);
 	++_grade;
-	this->checkGrade(_grade);
 }
 void		Bureaucrat::signForm(Form &form)
 {

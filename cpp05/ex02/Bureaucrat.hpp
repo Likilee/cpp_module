@@ -12,7 +12,7 @@ private:
 	std::string	const	_name;
 	int		_grade;
 	Bureaucrat();
-	void	checkGrade(int &grade) const;
+	void	checkGrade(int grade) const;
 public:
 	Bureaucrat(const std::string &name, const int &grade);
 	Bureaucrat(const Bureaucrat &from);
