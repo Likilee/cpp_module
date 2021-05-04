@@ -370,3 +370,26 @@ What is 중첩 의존 이름
 
 ### [try catch 예외처리를 이용해서 메모리 이슈를 잡을 수 있는가? 일단 NO](https://www.daniweb.com/programming/software-development/threads/398285/is-there-any-way-to-catch-segmentation-fault)
 
+### [Duque ( 덱)](http://blog.naver.com/PostView.nhn?blogId=shinsy11&logNo=220586163805&parentCategoryNo=&categoryNo=26&viewDate=&isShowPopularPosts=true&from=search)
+
+>Stack 에는 iterator 가 없는데,, 어떻게 iterator를 붙여줄 수 있을까? .. 
+>
+>keypoint! 는 , Stack container가 어떻게 만들어져있는지를 보면 알 수 있다. Stack
+>`template <class T, class Container = deque<T> > class stack;`
+>
+>```c++
+>public:
+>    typedef _Container                               container_type;
+>```
+>
+>즉, Stack 의 container_type 은 deque<T> 이다. 
+>
+>deque<T>안에는 iterator들이 내장되어 있기 때문에 이녀석들을 꺼내서 stack에 public 으로 정의해서 사용하면 된다!
+>
+>
+>
+>stack 은 이렇게 정의되어 있기 때문에, stack의 
+
+
+
+### [const 처리로 오버로딩](https://kldp.org/node/122750)
