@@ -2,6 +2,47 @@
 #include <string>
 #include <iostream>
 
+class Awesome
+{
+	public:
+		Awesome( int n ) : _n( n ) {}
+		bool operator==( Awesome const & rhs ) const
+		{
+			return (this->_n == rhs._n);
+		}
+		bool operator!=( Awesome const & rhs ) const
+		{
+			return (this->_n != rhs._n);
+		}
+		bool operator>( Awesome const & rhs ) const
+		{
+			return (this->_n > rhs._n);
+		}
+		bool operator<( Awesome const & rhs ) const
+		{
+			return (this->_n < rhs._n);
+		}
+		bool operator>=( Awesome const & rhs ) const
+		{
+			return (this->_n >= rhs._n);
+		}
+		bool operator<=( Awesome const & rhs ) const
+		{
+			return (this->_n <= rhs._n);
+		}
+		int		getNumber(void) const
+		{
+			return (this->_n);
+		}
+	private:
+		int _n;
+};
+std::ostream &operator<<(std::ostream &out, Awesome const &awe)
+{
+	out << awe.getNumber();
+	return (out);
+}
+
 int		main()
 {
 	int a = 2;
@@ -53,5 +94,17 @@ int		main()
 	std::cout << "j address -> " << &j  << std::endl;
 	std::cout << "min(i, j) = " << ::min(i, j) << " (" << &::min(i, j) << ")" << std::endl;
 	std::cout << "max(i, j) = " << ::max(i, j) << " (" << &::max(i, j) << ")" << std::endl;
+
+
+
+	std::cout << "\n**** Test5: Class test ****" << std::endl;
+
+	Awesome awe1(50);
+	Awesome awe2(100);
+	::swap(awe1, awe2);
+	std::cout << awe1 << " | " << awe2 << std::endl;
+	std::cout << "min( awe1, awe2 ) = " << ::min(awe1, awe2) << std::endl;
+	std::cout << "max( awe1, awe2 ) = " << ::max(awe1, awe2) << std::endl;
+
 	return (0);
 }

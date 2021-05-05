@@ -16,7 +16,6 @@ void	iter(T *addr, size_t length, void (*f)(T const &))
 template<typename T>
 void display(T const &value)
 {
-
 	std::cout << value << " ";
 }
 

@@ -29,9 +29,34 @@ void identify_from_pointer(Base *p)
 		std::cout << "C type" << std::endl;
 }
 
-void identify_from_reference(Base &p)
+// void identify_from_reference(Base &p) //Using pointer style
+// {
+// 	identify_from_pointer(&p);
+// }
+
+void identify_from_reference(Base &p) //Using reference dynamic casting style
 {
-	identify_from_pointer(&p);
+	try
+	{
+		A &tmp = dynamic_cast<A&>(p);
+		(void)tmp;
+		std::cout << "A type" << std::endl;
+	}
+	catch (std::exception &e) {}
+	try
+	{
+		B &tmp = dynamic_cast<B&>(p);
+		(void)tmp;
+		std::cout << "B type" << std::endl;
+	}
+	catch (std::exception &e) {}
+	try
+	{
+		C &tmp = dynamic_cast<C&>(p);
+		(void)tmp;
+		std::cout << "C type" << std::endl;
+	}
+	catch (std::exception &e) {}
 }
 
 int		main()

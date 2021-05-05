@@ -39,9 +39,14 @@ template <typename T>
 T		&Array<T>::operator[](unsigned int i) const
 {
 	if (i >= _n)
-		throw std::exception();
+		throw Array<T>::OutOfRangeException();
 	else
 		return (_array[i]);
+}
+template <typename T>
+const char *Array<T>::OutOfRangeException::what() const throw()
+{
+	return ("Index is out of range");
 }
 
 template <typename T>
@@ -55,3 +60,4 @@ T				*Array<T>::getArray() const
 {
 	return (_array);
 }
+

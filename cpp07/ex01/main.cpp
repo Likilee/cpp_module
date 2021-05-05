@@ -1,4 +1,27 @@
 #include "iter.hpp"
+#include "iter.hpp"
+#include <string>
+#include <iostream>
+
+class Awesome
+{
+	public :
+		Awesome(void) : _n(42) {return ;}
+		int get(void) const {return this->_n;}
+	private :
+		int _n;
+};
+std::ostream & operator<<( std::ostream & o, Awesome const & rhs )
+{
+	o << rhs.get();
+	return o;
+}
+template< typename T >
+void print( T const & x )
+{
+	std::cout << x << std::endl;
+	return;
+}
 
 int main(void)
 {
@@ -30,5 +53,8 @@ int main(void)
 	iter(stringR, 2, &display); std::cout << std::endl;
 	iter(stringR, 0, &display); std::cout << std::endl;
 
+	std::cout << "\n*** Test6 : Class ***" << std::endl;
+	Awesome awesomes[5];
+	::iter(awesomes, 5 , print);
 	return (0);
 }

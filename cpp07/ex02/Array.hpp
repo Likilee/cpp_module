@@ -19,6 +19,11 @@ public:
 	T				&operator[](unsigned int i) const;
 	unsigned int	size() const;
 	T				*getArray() const;
+
+	class OutOfRangeException : public std::exception
+	{
+		virtual const char *what() const throw();
+	};
 };
 
 # include "Array.ipp"
