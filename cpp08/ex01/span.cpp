@@ -64,18 +64,10 @@ unsigned int	Span::longestSpan()
 {
 	if (_multiset.size() <= 1)
 		throw FewKeyException();
-	std::multiset<int>::iterator	itr_front = _multiset.begin();
-	std::multiset<int>::iterator	itr_next = ++_multiset.begin();
-	unsigned int					gap;
-	unsigned int					longest_gap = static_cast<long long>(*itr_next) - static_cast<long long>(*itr_front);
+	std::multiset<int>::iterator	itr_begin = _multiset.begin();
+	std::multiset<int>::iterator	itr_last = --_multiset.end();
+	unsigned int					longest_gap = static_cast<long long>(*itr_last) - static_cast<long long>(*itr_begin);
 
-	for (; itr_next != _multiset.end(); ++itr_next)
-	{
-		gap = static_cast<long long>(*itr_next) - static_cast<long long>(*itr_front);
-		if (longest_gap < gap)
-			longest_gap = gap;
-		++itr_front;
-	}
 	return (longest_gap);
 }
 
@@ -88,3 +80,9 @@ const char	*Span::FewKeyException::what() const throw()
 {
 	return ("Error : Container has few key..");
 }
+
+const char	*Span::TooBigSource::what() const throw()
+{
+	return ("Error : Source range is too big..");
+}
+

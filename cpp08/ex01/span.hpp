@@ -24,11 +24,15 @@ public:
 	template <typename Inputiterator>
 	void		addNumber(Inputiterator begin, Inputiterator end)
 	{
-		for (;begin != end; ++begin)
-			addNumber(*begin);
-
+		if (end - begin > _n)
+			throw TooBigSource();
+		else
+		{
+			for (;begin != end; ++begin)
+				addNumber(*begin);
+		}
 	}
-
+	
 	unsigned int	shortestSpan();
 	unsigned int	longestSpan();
 
@@ -37,6 +41,10 @@ public:
 		virtual const char	*what() const throw();
 	};
 	class FewKeyException : public std::exception
+	{
+		virtual const char	*what() const throw();
+	};
+	class TooBigSource : public std::exception
 	{
 		virtual const char	*what() const throw();
 	};

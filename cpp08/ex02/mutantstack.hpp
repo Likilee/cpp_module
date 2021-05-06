@@ -4,28 +4,28 @@
 # include <stack>
 # include <list>
 
-template <typename T>
-class MutantStack : public std::stack<T, std::list<T> >
+template <typename T, typename Container = std::list<T> >
+class MutantStack : public std::stack<T, Container >
 {
 private:
 	/* data */
 public:
-	MutantStack() : std::stack<T, std::list<T> >() {}
-	MutantStack(const MutantStack<T> &from) : std::stack<T, std::list<T> >(from)
+	MutantStack() : std::stack<T, Container >() {}
+	MutantStack(const MutantStack<T> &from) : std::stack<T, Container >(from)
 	{
 		*this = from;
 	}
 	virtual ~MutantStack() {}
 	MutantStack	&operator=(const MutantStack<T> &rvalue)
 	{
-		std::stack<T, std::list<T> >::operator=(rvalue);
+		std::stack<T, Container >::operator=(rvalue);
 		return (*this);
 	}
 
-	typedef typename std::stack<T, std::list<T> >::container_type::iterator iterator;
-	typedef typename std::stack<T, std::list<T> >::container_type::const_iterator const_iterator;
-	typedef typename std::stack<T, std::list<T> >::container_type::reverse_iterator reverse_iterator;
-	typedef typename std::stack<T, std::list<T> >::container_type::const_reverse_iterator const_reverse_iterator;
+	typedef typename std::stack<T, Container >::container_type::iterator iterator;
+	typedef typename std::stack<T, Container >::container_type::const_iterator const_iterator;
+	typedef typename std::stack<T, Container >::container_type::reverse_iterator reverse_iterator;
+	typedef typename std::stack<T, Container >::container_type::const_reverse_iterator const_reverse_iterator;
 
 	iterator		begin()
 	{

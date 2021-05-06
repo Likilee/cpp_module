@@ -24,7 +24,6 @@ int main()
 	for(MutantStack<int>::iterator iter = mstack.begin(); iter != mstack.end(); iter++)
 		std::cout << "value : " << *iter << std::endl;
 
-	std::cout << "================== mutant stack test end=============" << std::endl;
 
 	std::cout << "================== list test ========================" << std::endl;
 
@@ -33,10 +32,10 @@ int main()
 	list.push_back(5);
 	list.push_back(17);
 
-	std::cout << "top : " << list.front() << std::endl;
+	std::cout << "top : " << list.back() << std::endl;
 
-	list.pop_front();
-	std::cout << "top : " << list.front() << std::endl;
+	list.pop_back();
+	std::cout << "top : " << list.back() << std::endl;
 	std::cout << "size : " << list.size() << std::endl;
 
 	list.push_back(3);
@@ -47,7 +46,6 @@ int main()
 	for(std::list<int>::iterator iter = list.begin(); iter != list.end(); iter++)
 		std::cout << "value : " << *iter << std::endl;
 
-	std::cout << "================== list test end=====================" << std::endl;
 
 	std::cout << "================== copy constructor test ============" << std::endl;
 	MutantStack<int> s_copy(mstack);
@@ -76,7 +74,6 @@ int main()
 	for(MutantStack<int>::iterator iter = s_oper.begin(); iter != s_oper.end(); iter++)
 		std::cout << *iter << std::endl;
 
-	std::cout << "================== copy constructor test ============" << std::endl;
 
 	std::cout << "================== const instance test ==============" << std::endl;
 
@@ -85,14 +82,13 @@ int main()
 		const MutantStack<int> const_stack = s_oper;
 		MutantStack<int>::const_iterator iter = const_stack.begin();
 		std::cout << *iter << std::endl;
-		// *iter = 5;
+		// *iter = 9;
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
 
-	std::cout << "================== const instance test ==============" << std::endl;
 
 	std::cout << "================== reverse iterator test ==============" << std::endl;
 	MutantStack<int> reverse;
@@ -110,7 +106,6 @@ int main()
 	for (MutantStack<int>::const_reverse_iterator iter = const_reverse.rbegin(); iter != const_reverse.rend(); iter++)
 		std::cout << "value : " << *iter << std::endl;
 
-	std::cout << "================== reverse iterator test ==============" << std::endl;
 
 	return 0;
 }
